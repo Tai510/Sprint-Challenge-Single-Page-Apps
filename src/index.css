@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbgZmugawN8m2XyQrRi_C5dkqKY-4JU7__OJFPu1RgpBxZEw-uA');
+  background-size: cover;
 }
 
 main {
@@ -9,7 +11,7 @@ main {
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: #fff;
+  background: #6990B1;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -27,13 +29,12 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
-.main-img {
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto;
-} */
 
-header h1 {
-  text-align: center;
+
+#nav-link {
+  text-decoration: none;
+  font-size: 27px;
+  padding-top: 26px;
+  color: white;
+  text-shadow: 1px 1px black;
 }
