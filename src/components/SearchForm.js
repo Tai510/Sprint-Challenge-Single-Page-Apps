@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import styled, { css } from 'styled-components';
+import CharacterList from "./CharacterList";
 
-const SearchBar = styled.div`
+const SearchBar = styled.form`
 display: flex;
 `
 
@@ -18,12 +19,30 @@ outline: none;
 border-radius: 5px;
 `
 
-export default function SearchForm() {
+export default function SearchForm(props) {
+
+  const [searchChar, setSearchChar] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleChange = e => {
+    e.preventDefault();
+    const searchedTerm = e.target.value;
+    console.log(e.target.value);
+    setSearchChar(searchChar);
+    setSearchResults(
+    props.characters.filter(member => member.name.match(searchChar))
+    );
+  };
  
   return (
-        <SearchBar className='search-bar'>
+        <SearchBar handleChange={handleChange} searchTerm={searchChar} className='search-bar'>
           <i id='search-bar' class="fas fa-search"></i>
-          <Input id='search-input' placeholder='search'></Input>
+          <Input id='search-input' 
+          id="name"
+          type="text"
+          name="textfield"
+          value={props.searchTerm}
+          onChange={handleChange}></Input>
         </SearchBar>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
 import WelcomePage from './components/WelcomePage.js';
@@ -11,7 +11,17 @@ display: flex;
 `
 
 
+
+
 export default function App() {
+
+  const [name, setName] = useState("");
+
+  const searchHandler = (e, search) => {
+    e.preventDefault();
+    setName(search.name);
+  };
+
   return (
     <main>
     <Router>
