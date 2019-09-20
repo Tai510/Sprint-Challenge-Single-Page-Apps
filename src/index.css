@@ -32,9 +32,24 @@ main {
 
 
 #nav-link {
-  text-decoration: none;
   font-size: 27px;
-  padding-top: 26px;
+  padding-top: 33px;
   color: white;
+  text-shadow: 1px 1px black;
+  margin-left: 166px;
+}
+
+#search-bar {
+  color: white;
+  text-shadow: 1px 1px black;
+  margin-right: 5px;
+  outline: none;
+  font-size: 26px;
+  margin-top: 38px;
+}
+
+#search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
   text-shadow: 1px 1px black;
 }

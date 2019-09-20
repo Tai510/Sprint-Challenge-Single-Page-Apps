@@ -6,7 +6,7 @@ const H1Header = styled.h1`
 text-align: center;
 font-family: 'Patrick Hand', cursive;
 font-size: 30px;
-margin-left: 208px;
+margin-left: 149px;
 color: white;
 text-shadow: 1px 1px black;
 `

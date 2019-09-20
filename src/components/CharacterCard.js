@@ -28,7 +28,7 @@ export default function CharacterCard(props) {
 
 
   return (
-    <CharList className='char-list'>
+    <CharList>
       <Image src={props.image}></Image>
       <h1>Name : {props.name}</h1>
       <h3> Status : {props.status}</h3>
